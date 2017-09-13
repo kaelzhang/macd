@@ -15,7 +15,9 @@
 
 # macd
 
-<!-- description -->
+FinTech utility to calculate [MACD](https://en.wikipedia.org/wiki/MACD).
+
+MACD, short for Moving Average Convergence / Divergence, is a trading indicator used in technical analysis of stock prices, created by Gerald Appel in the late 1970s.
 
 ## Install
 
@@ -27,6 +29,38 @@ $ npm install macd
 
 ```js
 import macd from 'macd'
+
+macd(data)
+
+// which returns:
+// {
+//   MACD: <Array>,
+//   signal: <Array>,
+//   histogram: <Array>
+// }
+```
+
+## macd(data, slowPeriods, fastPeriods, signalPeriods)
+
+- **data** `Array.<Number>` the collection of prices
+- **slowPeriods** `Number=26` the size of slow periods. Defaults to `26`
+- **fastPeriods** `Number=12` the size of fast periods. Defaults to `12`
+- **signalPeriods** `Number=9` the size of periods to calculate the MACD signal line.
+
+Returns `MACDGraph`
+
+### struct `MACDGraph`
+
+- **MACD** `Array.<Number>` the difference between [EMAs](https://www.npmjs.com/package/moving-averages#exponential-moving-average-emadata-size) of the fast periods and EMAs of the slow periods.
+- **signal** `Array.<Number>` the EMAs of the `MACD`
+- **histogram** `Array.<Number>` `MACD` minus `signal`
+
+In some countries, such as China, the three series above are commonly known as:
+
+```
+MACD       -> DIF
+signal     -> DEA
+histogram  -> MACD
 ```
 
 ## License

@@ -1,7 +1,7 @@
 {
   "name": "macd",
   "version": "1.0.0",
-  "description": "macd",
+  "description": "FinTech utility to calculate MACD, the Moving Average Convergence / Divergence.",
   "main": "lib/index.js",
   "module": "src/index.js",
   "scripts": {
@@ -11,14 +11,19 @@
     "report-cov": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "files": [
-    "lib/"
+    "lib/",
+    "src/"
   ],
   "repository": {
     "type": "git",
     "url": "git://github.com/kaelzhang/macd.git"
   },
   "keywords": [
-    "macd"
+    "macd",
+    "moving average",
+    "convergence",
+    "divergence",
+    "fintech"
   ],
   "engines": {
     "node": ">=4"
@@ -56,6 +61,7 @@
     "rollup-plugin-node-resolve": "^3.0.0"
   },
   "dependencies": {
-    "babel-runtime": "^6.23.0"
+    "math-array": "^1.1.1",
+    "moving-averages": "^4.0.5"
   }
 }
