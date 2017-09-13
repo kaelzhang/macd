@@ -17,7 +17,7 @@
 
 FinTech utility to calculate [MACD](https://en.wikipedia.org/wiki/MACD).
 
-MACD, short for Moving Average Convergence / Divergence, is a trading indicator used in technical analysis of stock prices, created by Gerald Appel in the late 1970s.
+**MACD**, short for Moving Average Convergence / Divergence, is a trading indicator used in technical analysis of stock prices, created by Gerald Appel in the late 1970s.
 
 ## Install
 
@@ -57,7 +57,7 @@ Returns `MACDGraph`
 
 In some countries, such as China, the three series above are commonly known as:
 
-```
+```sh
 MACD       -> DIF
 signal     -> DEA
 histogram  -> MACD
