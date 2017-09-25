@@ -1,6 +1,6 @@
 {
   "name": "macd",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "FinTech utility to calculate MACD, the Moving Average Convergence / Divergence.",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -61,7 +61,7 @@
     "rollup-plugin-node-resolve": "^3.0.0"
   },
   "dependencies": {
-    "math-array": "^1.1.1",
+    "math-array": "^1.1.2",
     "moving-averages": "^4.0.5"
   }
 }
